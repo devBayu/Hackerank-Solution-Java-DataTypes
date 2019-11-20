@@ -39,15 +39,14 @@ public class Main {
             {
                 long x=sc.nextLong();
                 System.out.println(x+" can be fitted in:");
-                if(x>=-128 && x<=127){
-                    System.out.println("* byte");
-                } else if(x <= 32767 && x>=-32768) {
-                    System.out.println("* short \n* int \n* long");
-                } else if(x <= 2147483647 && x >=-2147483648) {
-                    System.out.println("* int \n* long");
-                } else if(x <= 9223372036854775807l && x >= -9223372036854775808l) {
+                if(x>=-128 && x<=127)System.out.println("* byte");
+                //Complete the code
+                if(x >= -Math.pow(2, 15) && x <= Math.pow(2, 15) - 1)
+                    System.out.println("* short");
+                if(x >= -Math.pow(2, 31) && x <= Math.pow(2, 31) - 1)
+                    System.out.println("* int");
+                if(x >= -Math.pow(2, 63) && x <= Math.pow(2, 63) - 1)
                     System.out.println("* long");
-                }
             }
             catch(Exception e)
             {
